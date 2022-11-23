@@ -37,10 +37,10 @@
                 </div>
                 <div>
                     <a class="navbar-brand brand-logo" href="index.html">
-                        {{-- <img src="{{asset('template/images/logo.svg')}}" alt="logo" /> --}}
+                        <img style="width:12vh; height:12vh;" src="{{asset('template/images/dashboard/p.png')}}" alt="logo" />
                     </a>
                     <a class="navbar-brand brand-logo-mini" href="index.html">
-                        {{-- <img src="{{asset('template/images/logo-mini.svg')}}" alt="logo" /> --}}
+                        <img style="width:11vh; height:5vh;" src="{{asset('template/images/dashboard/p.png')}}" alt="logo" />
                     </a>
                 </div>
             </div>
