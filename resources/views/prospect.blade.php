@@ -40,7 +40,7 @@
                                 <td>{{$row->remark}}</td>
                                 <td>
                                     <a href="/tampilpros/{{$row->id}}" class="btn btn-primary">Edit</a>
-                                    <a href="#" class="btn btn-danger delete" data-id="{{$row->id}}" data-nama="{{$row->nama}}">Delete</a></td>
+                                    <a href="#" class="btn btn-danger delete" data-id="{{$row->id}}" data-email="{{$row->email}}">Delete</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -57,11 +57,11 @@
 <script>
 $('.delete').click(function(){
     var prosid = $(this).attr ('data-id');
-  
+    var email = $(this).attr ('data-email');
  
 swal({
   title: "Yakin?",
-  text: "kamu akan menghapus data dengan id "+prosid+"",
+  text: "kamu akan menghapus data dengan email "+email+"",
   icon: "warning",
   buttons: true,
   dangerMode: true,
@@ -70,7 +70,7 @@ swal({
   if (willDelete) {
     window.location ="/delete/"+prosid+""
     swal("Data berhasil dihapus", {
-      icon: "success",
+    icon: "success",
     });
   } else {
     swal("Data tidak terhapus");
