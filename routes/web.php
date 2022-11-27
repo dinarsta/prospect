@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AddprospectController;
+use App\Http\Controllers\PresensiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,10 @@ Route::get('/register', [LoginController::class,'register'])->name('register');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
 // logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+Route::get('masuk', [PresensiController::class, 'index'])->name('masuk');
+Route::post('simpan-masuk', [PresensiController::class, 'store'])->name('simpan-masuk');
+
+route::get('/keluar', [PresensiController::class, 'keluar'])->name('keluar');
+Route::post('ubah-presensi', [PresensiController::class, 'presensipulang'])->name('ubah-presensi');

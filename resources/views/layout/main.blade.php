@@ -36,10 +36,10 @@
                     </button>
                 </div>
                 <div>
-                    <a class="navbar-brand brand-logo" href="index.html">
+                    <a class="navbar-brand brand-logo" href="/">
                         <img style="width:12vh; height:12vh;" src="{{asset('template/images/dashboard/p.png')}}" alt="logo" />
                     </a>
-                    <a class="navbar-brand brand-logo-mini" href="index.html">
+                    <a class="navbar-brand brand-logo-mini" href="/">
                         <img style="width:11vh; height:5vh;" src="{{asset('template/images/dashboard/p.png')}}" alt="logo" />
                     </a>
                 </div>
@@ -413,7 +413,7 @@
            <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/">
                   <i class="mdi mdi-grid-large menu-icon"></i>
                   <span class="menu-title">Dashboard</span>
                 </a>
@@ -423,16 +423,47 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                   aria-controls="ui-basic">
                   <i class="menu-icon mdi mdi-floor-plan"></i>
-                  <span class="menu-title">Sales</span>
+                  <span class="menu-title">Sales order</span>
                   <i class="menu-arrow"></i>
                 </a>
                 <div class="collapse" id="ui-basic">
                   <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Sales order</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Sales prospect</a>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">menu1</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">menu2</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="/prospect">Add prospect</a>
+                   
+                  </ul>
+                </div>
+              </li>
+                   <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                  aria-controls="ui-basic">
+                  <i class="menu-icon mdi mdi-floor-plan"></i>
+                  <span class="menu-title">Sales Prospect</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-basic">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/tambahprospect prospect">add prospect</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/prospect">list prospect</a>
                     </li>
+                   
+                  </ul>
+                </div>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                  aria-controls="ui-basic">
+                  <i class="menu-icon mdi mdi-floor-plan"></i>
+                  <span class="menu-title">Absensi</span>
+                  <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-basic">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/masuk">masuk</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="keluar">keluar</a>
+                    </li>
+                   
                   </ul>
                 </div>
               </li>
@@ -448,12 +479,7 @@
                   </ul>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
-                  <i class="menu-icon mdi mdi-file-document"></i>
-                  <span class="menu-title">Absensi</span>
-                </a>
-              </li>
+           
               <li class="nav-item nav-category">Logout</li>
               <li class="nav-item">
                 <a class="nav-link" href="/logout">
