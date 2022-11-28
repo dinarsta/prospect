@@ -71,18 +71,14 @@ class PresensiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function halamanrekap()
-    {
-        return view('Presensi.Halaman-rekap-karyawan');
-    }
+
 
 
     public function tampildatakeseluruhan($tglawal, $tglakhir)
     {
         $presensi = Presensi::with('user')->whereBetween('tgl', [$tglawal, $tglakhir])->orderBy('tgl', 'asc')->get();
-        return view('Presensi.Rekap-karyawan', compact('presensi'));
+        return view('rekap', compact('presensi'));
     }
-
 
     public function presensipulang()
     {
@@ -107,7 +103,9 @@ class PresensiController extends Controller
         } else {
             dd("sudah ada");
         }
+        return view('Presensi.Rekap-karyawan', compact('presensi'));
     }
+    
 
     public function update(Request $request, $id)
     {
