@@ -72,7 +72,10 @@ class PresensiController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
+    public function halamanrekap()
+    {
+        return view('Halaman-rekap');
+    }
 
     public function tampildatakeseluruhan($tglawal, $tglakhir)
     {

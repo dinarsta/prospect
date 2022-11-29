@@ -43,6 +43,6 @@ Route::post('simpan-masuk', [PresensiController::class, 'store'])->name('simpan-
 
 route::get('/keluar', [PresensiController::class, 'keluar'])->name('keluar');
 Route::post('ubah-presensi', [PresensiController::class, 'presensipulang'])->name('ubah-presensi');
-Route::get('filter-data', [PresensiController::class, 'halamanrekap'])->name('filter-data');
+Route::get('filter-data', [PresensiController::class, 'Halamanrekap'])->name('filter-data');
 Route::get('filter-data/{tglawal}/{tglakhir}', [PresensiController::class, 'tampildatakeseluruhan'])->name('filter-data-keseluruhan');
 // Route::resource('presensi', PresensiController::class);
