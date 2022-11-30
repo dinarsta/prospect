@@ -31,7 +31,7 @@
 
     </style>
     </head>
-<body class="hold-transition sidebar-mini" onload="realtimeClock()">
+<body class="hold-transition" onload="realtimeClock()">
     <div class="content-wrapper">
         <div class="content">
             <div class="card card-info card-outline mx-5">

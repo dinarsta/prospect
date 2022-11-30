@@ -30,13 +30,14 @@
         }
 
     </style>
-    </head>
-<body class="hold-transition sidebar-mini" onload="realtimeClock()">
+</head>
+
+<body class="hold-transition" onload="realtimeClock()">
     <div class="content-wrapper">
         <div class="content">
             <div class="card card-info card-outline mx-5">
                 <div class="card-body">
-                        <form action="{{ route('simpan-masuk') }}" method="post">
+                    <form action="{{ route('simpan-masuk') }}" method="post">
                         {{ csrf_field() }}
                         <div class="form-group p-5">
                             <center>
@@ -45,12 +46,12 @@
                                                     4px 4px 20px #36D6FE,
                                                     4px 4px 30px#36D6FE,
                                                     4px 4px 40px #36D6FE;">
-                                        </label>
+                                </label>
                             </center>
                         </div>
                         <center>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Klik Untuk Presensi masuk</button>
+                                <button type="submit" class="btn btn-primary">Klik Untuk Presensi Masuk</button>
                             </div>
                         </center>
                     </form>

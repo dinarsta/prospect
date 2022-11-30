@@ -52,7 +52,7 @@ class PresensiController extends Controller
             ['tgl', '=', $tanggal],
         ])->first();
         if ($presensi) {
-            dd("sudah ada");
+            dd(" absen masuk sudah ada");
         } else {
             Presensi::create([
                 'id_user' => auth()->user()->id,
@@ -104,7 +104,7 @@ class PresensiController extends Controller
             $presensi->update($dt);
             return redirect('keluar');
         } else {
-            dd("sudah ada");
+            dd(" absen keluar sudah ada");
         }
         return view('Presensi.Rekap-karyawan', compact('presensi'));
     }

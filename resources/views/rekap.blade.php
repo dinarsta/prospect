@@ -1,8 +1,7 @@
 @extends('layout.main')
 @section('content')
 
-
-    <div style="margin: auto;" class="col-8 grid-margin stretch-card">
+<div style="margin: auto;" class="col-8">
     <div class="card">
         <div class="card-body">
             <h4 class="card-title">History absensi</h4>
@@ -23,7 +22,7 @@
                     </a>
                 </div>
             </form>
-            <div class="table-responsive">
+    <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -51,9 +50,8 @@
                 </table>
             </div>
         </div>
-    </div>
 </div>
-<style>
 
+</div>
 
 @endsection
