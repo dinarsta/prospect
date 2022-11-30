@@ -453,6 +453,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/masuk">Absensi masuk</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/keluar">Absensi keluar</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/filter-data">History absensi</a></li>
             </ul>
             </div>
           </li>

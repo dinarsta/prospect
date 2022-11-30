@@ -2,10 +2,10 @@
 @section('content')
 
 
-    <div class="col-6 grid-margin stretch-card mx-5">
+    <div style="margin: auto;" class="col-8 grid-margin stretch-card">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">Rekap data</h4>
+            <h4 class="card-title">History absensi</h4>
 
             <form class="forms-sample ">
                 <div class="form-group">
