@@ -36,7 +36,7 @@
         <div class="content">
             <div class="card card-info card-outline mx-5">
                 <div class="card-body">
-                        <form action="{{ route('ubah-presensi') }}" method="post">
+                      <form action="{{ route('ubah-presensi') }}" method="post">  
                         {{ csrf_field() }}
                         <div class="form-group p-5">
                             <center>

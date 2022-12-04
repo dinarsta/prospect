@@ -16,7 +16,8 @@ class PresensiController extends Controller
      */
     public function index()
     {
-        return view('masuk');
+        $presensi = presensi::all();
+        return view('masuk',compact('presensi'));
     }
 
     public function keluar()

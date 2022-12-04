@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin2 </title>
+    <title>Prospect </title>
     <!-- plugins:css -->
     <link rel="stylesheet" href=" {{asset('template/vendors/feather/feather.css')}}">
     <link rel="stylesheet" href="{{asset('template/vendors/mdi/css/materialdesignicons.min.css')}}">
@@ -451,9 +451,8 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/masuk">Absensi masuk</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/keluar">Absensi keluar</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/filter-data">History absensi</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/masuk">Check In / Out</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/filter-data">Filter absensi</a></li>
             </ul>
             </div>
           </li>
