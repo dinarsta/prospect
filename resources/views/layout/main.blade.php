@@ -197,19 +197,19 @@
                                 <img class="img-md rounded-circle" src="{{asset('template/images/faces/face8.jpg')}}" alt="Profile image">
                                 <p class="mb-1 mt-3 font-weight-semibold"></p>
                                 <p class="fw-light text-muted mb-0">{{Auth::user()->name}}</p>
-                            </div>
-                            <a class="dropdown-item"><i
+                                 </div>
+                            <a href={{route('edit')}} class="dropdown-item"><i
                                     class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile
-                                <span class="badge badge-pill badge-danger">1</span></a>
-                            <a class="dropdown-item"><i
+                               </a>
+                            {{-- <a class="dropdown-item"><i
                                     class="dropdown-item-icon mdi mdi-message-text-outline text-primary me-2"></i>
-                                Messages</a>
-                            <a class="dropdown-item"><i
+                                Messages</a> --}}
+                            {{-- <a class="dropdown-item"><i
                                     class="dropdown-item-icon mdi mdi-calendar-check-outline text-primary me-2"></i>
                                 Activity</a>
                             <a class="dropdown-item"><i
                                     class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i>
-                                FAQ</a>
+                                FAQ</a> --}}
                             <a href="/logout" class="dropdown-item"><i
                                     class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
                         </div>
@@ -413,7 +413,7 @@
           <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/">
               <i class="mdi mdi-grid-large menu-icon"></i>
               <span class="menu-title">Dashboard</span>
             </a>
@@ -427,7 +427,8 @@
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"><a class="nav-link" href="/prospect">Add prospect</a></li>
+                <li class="nav-item"><a class="nav-link" href="/prospect">List prospect</a></li>
+                <li class="nav-item"><a class="nav-link" href="/tambahprospect">Add prospect</a></li>
               </ul>
             </div>
           </li>
@@ -452,6 +453,7 @@
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/masuk">Check In / Out</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/filter-data">History absensi</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/filter-data">Filter absensi</a></li>
             </ul>
             </div>

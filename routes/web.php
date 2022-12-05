@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\AddprospectController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\AddprospectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,9 @@ use App\Http\Controllers\PresensiController;
 Route::get('/', function () {
     return view('welcome');
 });
+// profile
+Route::get('/edit', [ProfileController::class, 'edit'])->name('edit');
+Route::put('/update/{id}', [ProfileController::class, 'update'])->name('update');
 
 Route::get('/prospect',[AddprospectController::class,'index'])->name('prospect')->middleware('auth');
 // add prospect
