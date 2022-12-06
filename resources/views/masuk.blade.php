@@ -68,7 +68,7 @@
                                 <button type="submit" class="btn btn-primary">Check in</button>
                             </div>
                             <div class="form-group mx-2">
-                                <a href="/ubah-presensi" class="btn btn-primary">Check out</a>
+                                <a href={{route('ubah-presensi')}} class="btn btn-primary">Check out</a>
                             </div>
                         </div>
                     </form>

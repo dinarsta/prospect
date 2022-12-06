@@ -2,8 +2,6 @@
 @section('content')
 <div class="container-xl px-4 mt-4">
     <!-- Account page navigation-->
-
-
     <div class="row">
         <div class="col-xl-4">
             <!-- Profile picture card-->
@@ -11,13 +9,17 @@
                 <div class="card-header">Detail profile</div>
                 <div class="card-body text-center">
                     <!-- Profile picture image-->
-                    <img class="img-account-profile rounded-circle mb-2"
-                        src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                    <img class="img-account-profile rounded-circle mb-2" src="{{asset('template/images/faces/pp.jpg')}}"
+                        alt="">
                     <!-- Profile picture help block-->
-                    <div class="small font-italic text-muted mb-4"><h3>{{Auth::user()->name}}</h3></div>
-                         <div class="small font-italic text-muted mb-4"><h4>{{Auth::user()->email}}</h4></div>
+                    <div class="small font-italic text-muted mb-4">
+                        <h3>{{Auth::user()->name}}</h3>
+                    </div>
+                    <div class="small font-italic text-muted mb-4">
+                        <h4>{{Auth::user()->email}}</h4>
+                    </div>
                     <!-- Profile picture upload button-->
-                   
+
                 </div>
             </div>
         </div>
@@ -27,29 +29,26 @@
                 <div class="card-header">Edit profile</div>
                 <div class="card-body">
                     <form action="{{route('update', auth::user()->id)}}" method="post">
-                   @csrf
-                   @method('put')
+                        @csrf
+                        @method('put')
 
 
                         <!-- Form Row-->
                         <div class=" mb-3">
                             <!-- Form Group (first name)-->
-                           
-                                <label class="small mb-1" for="inputFirstName">Full name</label>
-                                <input class="form-control"name="name" id="inputFirstName" type="text"
-                                    placeholder={{auth::user()->name}} required>
-                       
+                            <label class="small mb-1" for="name">Full name</label>
+                            <input class="form-control" name="name" id="name" type="text"
+                                placeholder={{auth::user()->name}} required>
                             <!-- Form Group (last name)-->
-                           </div>
+                        </div>
                         <div class="mb-3">
                             <label class="small mb-1" for="inputEmailAddress">Email address</label>
                             <input class="form-control" name="email" id="inputEmailAddress" type="email"
                                 placeholder={{auth::user()->email}} required>
                         </div>
                         <!-- Form Row-->
-
                         <!-- Save changes button-->
-                        <button  class="btn btn-primary" type="submit">Save changes</button>
+                        <button class="btn btn-primary" type="submit">Save changes</button>
                     </form>
                 </div>
             </div>

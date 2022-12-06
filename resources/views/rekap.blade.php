@@ -4,7 +4,7 @@
 <div style="margin: auto;" class="col-8">
     <div class="card">
         <div class="card-body">
-            <h4 class="card-title">History absensi</h4>
+           <h4 class="card-title">Filter absensi</h4>
 
             <form class="forms-sample ">
                 <div class="form-group">

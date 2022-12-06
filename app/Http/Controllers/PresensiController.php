@@ -19,10 +19,14 @@ class PresensiController extends Controller
         $presensi = presensi::all();
         return view('masuk',compact('presensi'));
     }
-
-    public function keluar()
+    public function history()
     {
-        return view('keluar');
+        $presensi = presensi::all();
+        return view('history', compact('presensi'));
+    }
+    public function ubah()
+    {
+        return view('masuk');
     }
 
     /**
@@ -103,7 +107,7 @@ class PresensiController extends Controller
 
         if ($presensi->jamkeluar == "") {
             $presensi->update($dt);
-            return redirect('keluar');
+            return redirect('masuk');
         } else {
             dd(" absen keluar sudah ada");
         }
