@@ -2,16 +2,20 @@
 @section('content')
 <div class="row">
     <div class="content-wrapper">
-        <a href="/tambahprospect" class="btn btn-primary mb-4">Add</a>
+        <a href="/tambahprospect" class="btn btn-transparant  mb-4"><h4>Add Prospect ( + )</h4></a>
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title text-center mb-5 mt-3"> Add prospect</h4>
+                    <h4 class="card-title text-center mb-2 mt-3"> List prospect</h4>
                     <div class="table-responsive">
+                        <div x class="div">
+                            <a style="width:70px;" href="/expdf" class="btn btn-primary text-white me-0 mb-4"><i
+                                    class="icon-download"></i></a>
+                        </div>
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
+                                    <th scope="col">No</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Date of Brith</th>
                                     <th scope="col">Email</th>

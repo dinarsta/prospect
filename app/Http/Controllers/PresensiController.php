@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DateTime;
 use DateTimeZone;
 use App\Models\Presensi;
+use PDF;
 use Illuminate\Http\Request;
 
 class PresensiController extends Controller
@@ -19,6 +20,7 @@ class PresensiController extends Controller
         $presensi = presensi::all();
         return view('masuk',compact('presensi'));
     }
+    
     public function history()
     {
         $presensi = presensi::all();
@@ -28,7 +30,7 @@ class PresensiController extends Controller
     {
         return view('masuk');
     }
-
+ 
     /**
      * Show the form for creating a new resource.
      *
@@ -113,8 +115,14 @@ class PresensiController extends Controller
         }
         return view('Presensi.Rekap-karyawan', compact('presensi'));
     }
+    public function pdf(){
+    $presensi = Presensi::all();
     
-
+    view()->share('presensi', $presensi);
+    $pdf = PDF::loadview('history-pdf');
+    return $pdf->download('historyabsensi.pdf');
+    
+    }
     public function update(Request $request, $id)
     {
         //

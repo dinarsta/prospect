@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Addprospect;
 use Illuminate\Http\Request;
+use PDF;
 
 class AddprospectController extends Controller
 {
@@ -36,4 +37,12 @@ class AddprospectController extends Controller
       $data->delete();
       return redirect()->route('prospect')->with('success', 'Prospect berhasil dihapus');
 }
+  public function expdf()
+  {
+    $data = Addprospect::all();
+
+    view()->share('data', $data);
+    $pdf = PDF::loadview('prospect-pdf');
+    return $pdf->download('prospect.pdf');
+  }
 }

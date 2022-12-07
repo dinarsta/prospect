@@ -40,14 +40,13 @@ Route::get('/register', [LoginController::class,'register'])->name('register');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
 // logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-
 // presensi
 Route::get('history', [PresensiController::class, 'history'])->name('history')->middleware('auth');
 Route::get('masuk', [PresensiController::class, 'index'])->name('masuk');
 Route::post('simpan-masuk', [PresensiController::class, 'store'])->name('simpan-masuk');
-
-
 Route::get('ubah-presensi', [PresensiController::class, 'presensipulang'])->name('ubah-presensi');
 Route::get('filter-data', [PresensiController::class, 'Halamanrekap'])->name('filter-data');
 Route::get('filter-data/{tglawal}/{tglakhir}', [PresensiController::class, 'tampildatakeseluruhan'])->name('filter-data-keseluruhan');
-// Route::resource('presensi', PresensiController::class);
+// export pdf
+Route::get('pdf', [PresensiController::class, 'pdf'])->name('pdf');
+Route::get('expdf', [AddprospectController::class, 'expdf'])->name('expdf');
