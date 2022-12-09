@@ -2,32 +2,34 @@
 <html>
 <head>
 <style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
 }
 
 th, td {
-  text-align: left;
-  padding: 8px;
+  padding: 15px;
 }
 h2{
     text-align: center;
     margin-bottom: 30px;
 }
-
-tr:nth-child(even) {background-color: #f2f2f2;}
 </style>
 </head>
 <body>
 
-<h2>History Absensi</h2>
+<h2>Attendance Report</h2>
 
-<div style="overflow-x: auto;">
- 
-</div>
-  <table>
-                    <table class="table table-hover">
+<p>Nama : {{Auth::user()->name}}</p>
+<p>Email : {{Auth::user()->email}}</p>
+<p>Date : {{Carbon\Carbon::now()->format('d/m/Y')}}</p>
+
+             <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>Tanggal</th>
@@ -52,5 +54,8 @@ tr:nth-child(even) {background-color: #f2f2f2;}
                         @endforeach
                     </tbody>
                 </table>
+
 </body>
 </html>
+
+

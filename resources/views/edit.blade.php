@@ -3,15 +3,20 @@
 
 
 <div class="row">
-    <div class="col-4">
+    <div class="col-8">
         <!-- Profile picture card-->
         <div class="card mb-4 mb-xl-0">
             <div class="card-header">Detail profile</div>
             <div class="card-body">
                 <!-- Profile picture image-->
                <div class="profile text-center">
+                @if(Auth::user()->image)
+                <img style= "height:100px; width:100px; background-position: center center; background-repeat: no-repeat;" class="img-account-profile rounded-circle mb-2" src="{{asset('image/'.Auth::user()->image)}}"
+                    alt="">
+                @else
                  <img class="img-account-profile rounded-circle mb-2" src="{{asset('template/images/faces/pp.jpg')}}"
                     alt="">
+                @endif
                 <!-- Profile picture help block-->
                 <div class="small font-italic text-muted mb-3">
                     <h3>{{Auth::user()->name}}</h3>
@@ -20,7 +25,7 @@
                     <h5>{{Auth::user()->email}}</h5>
                 </div>
                </div>
-            <form action="{{route('update', auth::user()->id)}}" method="post">
+            <form action="{{route('update', auth::user()->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('put')
                     <div class=" mb-3">
@@ -33,6 +38,10 @@
                         <label class="small mb-2 mt-2" for="inputEmailAddress">Email address</label>
                         <input class="form-control" name="email" id="inputEmailAddress" type="email"
                             placeholder={{auth::user()->email}} required>
+                    </div>
+                    <div class="mb-3 col-4">
+                      <label class="small mb-2 mt-2" for="image">Upload Image</label>
+                      <input type="file" class="form-control" name="image" id="inputImage">
                     </div>
                     <button class="btn btn-primary" type="submit">Save changes</button>
             
