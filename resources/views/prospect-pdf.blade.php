@@ -1,76 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <style>
-        table {
-            border-collapse: collapse;
-        margin: auto;
-          
-        }
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
 
-        th,
-        td {
-         font-size: 18px; 
-        }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-    </style>
+th, td {
+padding: 5px 5px 5px 5px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+</style>
 </head>
-
 <body>
 
+<h2>Attendance Report</h2>
 
-    <div style="overflow-x: auto;">
+<p>Nama : {{Auth::user()->name}}</p>
+<p>Email : {{Auth::user()->email}}</p>
+<p>Date : {{Carbon\Carbon::now()->format('d/m/Y')}}</p>
 
-    </div>
-    <!DOCTYPE html>
-    <html>
-
-    <head>
-        <style>
-            table {
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            th,
-            td {
-                text-align: left;
-               font-size: 12px;
-            }
-
-            h2 {
-                text-align: center;
-                margin-bottom: 10px;
-            }
-
-            tr:nth-child(even) {
-                background-color: #f2f2f2;
-            }
-            h2{
-                margin-bottom: 30px;
-            }
-
-        </style>
-    </head>
-
-    <body>
-
-        <h2>List Prospect</h2>
-
-        <div style="overflow-x: auto;">
-
-        </div>
-        <table class="table table-hover">
+             <table>
             <thead>
                 <tr>
                     <th scope="col">NO</th>
@@ -106,10 +66,7 @@
             </tbody>
         </table>
 
-
-    </body>
-
-    </html>
 </body>
-
 </html>
+
+
