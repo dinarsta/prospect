@@ -461,7 +461,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/masuk">Check In / Out</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/history">History absensi</a></li>
-                <li class="nav-item"> <a class="nav-link" href="/filter-data">Filter absensi</a></li>
+             
             </ul>
             </div>
           </li>

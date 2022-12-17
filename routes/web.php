@@ -22,6 +22,8 @@ Route::get('/', function () {
 // profile
 Route::get('/edit', [ProfileController::class, 'edit'])->name('edit');
 Route::put('/update/{id}', [ProfileController::class, 'update'])->name('update');
+Route::put('/updateimg/{id}', [ProfileController::class, '
+updateImg'])->name('update.img');
 
 Route::get('/prospect',[AddprospectController::class,'index'])->name('prospect')->middleware('auth');
 // add prospect
@@ -45,7 +47,7 @@ Route::get('history', [PresensiController::class, 'history'])->name('history')->
 Route::get('masuk', [PresensiController::class, 'index'])->name('masuk');
 Route::post('simpan-masuk', [PresensiController::class, 'store'])->name('simpan-masuk');
 Route::get('ubah-presensi', [PresensiController::class, 'presensipulang'])->name('ubah-presensi');
-Route::get('filter-data', [PresensiController::class, 'Halamanrekap'])->name('filter-data');
+Route::get('filter-data', [PresensiController::class, 'history'])->name('filter-data');
 Route::get('filter-data/{tglawal}/{tglakhir}', [PresensiController::class, 'tampildatakeseluruhan'])->name('filter-data-keseluruhan');
 // export pdf
 Route::get('pdf', [PresensiController::class, 'pdf'])->name('pdf');

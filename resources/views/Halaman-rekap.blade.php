@@ -16,7 +16,7 @@
                     <input type="date" name="tglakhir" id="tglakhir" class="form-control" placeholder="tanggal akhir" />
                 </div>
                 <div class="form-group">
-                    <a href="" onclick="this.href='/filter-data/'+ document.getElementById('tglawal').value +
+                    <a href="" onclick="this.href='/history/'+ document.getElementById('tglawal').value +
                             '/' + document.getElementById('tglakhir').value " class="btn btn-primary col-md-12">
                         Lihat <i class="fas fa-print"></i>
                     </a>
